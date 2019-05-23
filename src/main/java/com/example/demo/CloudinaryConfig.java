@@ -13,8 +13,8 @@ import java.util.Map;
 @Component
 public class CloudinaryConfig {
     private Cloudinary cloudinary;
-            @Autowired
-    public CloudinaryConfig(@Value("{$cloud.key}") String key,
+    @Autowired
+    public CloudinaryConfig(@Value("${cloud.key}") String key,
                             @Value("${cloud.secret}") String secret,
                             @Value("${cloud.name}") String cloud){
                 cloudinary = Singleton.getCloudinary();
@@ -30,7 +30,7 @@ public class CloudinaryConfig {
                     return null;
                 }
             }
-            public String createURL(String name, int width,
+            public String createUrl(String name, int width,
                                     int height, String action){
                 return cloudinary.url()
                         .transformation(new com.cloudinary.Transformation()

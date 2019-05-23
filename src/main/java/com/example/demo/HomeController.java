@@ -6,7 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import com.cloudinary.utils.ObjectUtils;
-
+import org.springframework.beans.factory.annotation.Value;
 import java.io.IOException;
 import java.util.Map;
 

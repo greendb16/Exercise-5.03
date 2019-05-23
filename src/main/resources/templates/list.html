@@ -7,8 +7,8 @@
 <body>
 <a href="/add">Add an Actor</a>
     <div th:each="actor : ${actors}">
-        <div th:if="${actor.headshot} !=null">
-            <img th:src="${actor.headshot}" />
+        <div th:if="${actor.headshot} != null">
+            <img th:src="${actor.headshot}" th:height="50" th:width="50" />
             <hr />
         </div>
         <h3 th:text="${actor.name}"></h3>
